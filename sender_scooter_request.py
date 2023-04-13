@@ -10,18 +10,13 @@ def post_new_order():
 
 
 response = post_new_order()
-track = response.json()["track"]
-print(response.status_code)
-print(response.json())
+track = response.json()['track']
 
 
-def get_order_by_track_number():
+def get_order_by_track(track):
     return requests.get(configuration.URL_SERVICE
                         + configuration.GET_ORDER_BY_TRACK_NUMBER_PATH
                         + str(track))
 
 
-response = get_order_by_track_number()
-assert response.status_code == 200
-print(response.status_code)
-print(response.json())
+response = get_order_by_track(track)
