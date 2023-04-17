@@ -11,3 +11,14 @@ order_body = {
         "BLACK"
     ]
 }
+
+courier_body = {
+    "login": "ninja",
+    "password": "1234",
+    "firstName": "saske"
+}
+
+courier_login = {
+    "login": "ninja",
+    "password": "1234"
+}
