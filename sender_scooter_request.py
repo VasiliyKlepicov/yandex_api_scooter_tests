@@ -16,11 +16,11 @@ def get_order_by_track(track):
                         params={'t': track})
 
 
-def get_orders_no_courier_id():
+def get_all_orders():
     return requests.get(configuration.URL + configuration.GET_ORDERS_PATH)
 
 
-def get_orders(courier_id):
+def get_orders_courier_id(courier_id):
     return requests.get(configuration.URL + configuration.GET_ORDERS_PATH,
                         params={'courierId': courier_id})
 
@@ -30,7 +30,7 @@ def cancel_order(track):
                         params={'track': track})
 
 
-def post_create_courier(courier_body):
+def create_courier(courier_body):
     return requests.post(configuration.URL + configuration.CREATE_COURIER_PATH,
                          json=courier_body)
 
@@ -45,9 +45,9 @@ def accept_order(order_id, courier_id):
                         + str(order_id), params={'courierId': courier_id})
 
 
-def finish_order(track):
-    return requests.put(configuration.URL + configuration.FINISH_ORDER_PATH,
-                        params={'track': track})
+def finish_order(order_id):
+    return requests.put(configuration.URL + configuration.FINISH_ORDER_PATH
+                        + str(order_id))
 
 
 def delete_courier(courier_id):

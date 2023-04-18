@@ -1,4 +1,4 @@
-URL = "https://99820729-35da-41be-87b6-89434d2844c6.serverhub.praktikum-services.ru"
+URL = "https://f06e0831-a73e-44fb-9eee-4c3aea9ff847.serverhub.praktikum-services.ru"
 PING_SERVER = "/api/v1/ping"
 
 NEW_ORDER_PATH = "/api/v1/orders"

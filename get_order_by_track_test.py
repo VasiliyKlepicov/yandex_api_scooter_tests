@@ -8,6 +8,7 @@ def test_get_order_by_track():
     track = post_new_order_response.json()['track']
     response = sender_scooter_request.get_order_by_track(track)
     assert response.status_code == 200
+    assert response.json()['order']['id'] != 0
 
 
 def test_get_order_by_empty_track():
