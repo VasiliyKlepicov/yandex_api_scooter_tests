@@ -5,6 +5,7 @@ import data
 def test_get_all_orders():
     response = sender_scooter_request.get_all_orders()
     assert response.status_code == 200
+    assert response.json()
 
 
 def test_get_orders_courier_id():
